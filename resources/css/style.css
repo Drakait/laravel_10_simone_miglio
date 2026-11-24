@@ -2,6 +2,10 @@
     height: 60vh;
 }
 
+.header-sm {
+    height: 30vh;
+}
+
 body {
     min-height: 100vh;
     background: linear-gradient(135deg, #1b1f4b 0%, #602776 50%, #7a2f3a 100%);

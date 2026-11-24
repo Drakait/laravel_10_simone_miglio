@@ -10,4 +10,8 @@
             </div>
         </div>
     </header>
+
+    <x-display-message />
+    <x-display-errors />
+
 </x-layout>

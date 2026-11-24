@@ -8,6 +8,13 @@ use App\Http\Requests\ArticleRequest;
 
 class ArticleController extends Controller
 {
+    ///!!Deprecato
+    // public function __construct()
+    // {
+    //     $this->middleware('auth')->except(['index']);
+    // }
+
+
     public function create()
     {
         return view('article.create');

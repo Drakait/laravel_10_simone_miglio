@@ -5,21 +5,11 @@
                 <h1 class="text-center mb-4">Crea un articolo</h1>
                 <form class="p-4 glass-form" action="{{ route('article.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
-                    @if (session('success'))
-                    <div class="alert glass-alert alert-dismissible fade show" role="alert">
-                        {{ session('success') }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                    @endif
-                    @if ($errors->any())
-                    <div class="glass-error mb-3 p-3">
-                        <ul class="mb-0">
-                            @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                    @endif
+
+                    <x-display-message />
+
+                    <x-display-errors />
+
                     <div class="mb-3">
                         <label for="title" class="form-label">Titolo</label>
                         <input name="title" type="text" class="form-control" id="title" value="{{ old('title') }}">
